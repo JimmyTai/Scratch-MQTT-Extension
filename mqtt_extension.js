@@ -16,12 +16,17 @@
         // Code that gets executed when the block is run
         console.log("my_first_block");
     };
+    
+    ext.power = function(base, exponent) {
+        return Math.pow(base, exponent);
+    };
 
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
             // Block type, block name, function name
             [' ', 'my first block', 'my_first_block'],
+            ['r', '%n ^ %n', 'power', 2, 3],
         ]
     };
 
