@@ -5,11 +5,13 @@
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
+        consle.log("_getStatus");
         return {status: 2, msg: 'Ready'};
     };
 
     ext.my_first_block = function() {
         // Code that gets executed when the block is run
+        consle.log("my_first_block");
     };
 
     // Block and block menu descriptions
