@@ -1,4 +1,7 @@
 (function(ext) {
+    
+    console.log('fuck you');
+    
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
 
