@@ -2,6 +2,18 @@
     
     console.log('fuck you');
     
+    var mqtt = require('mqtt');
+    var client = mqtt.connect('mqtt://140.138.41.50:3423');
+
+    client.on('connect', function () {
+        console.log("mqtt connected")
+        client.subscribe('jimmytai0315')
+    });
+
+    client.on('message', function (topic, message) {
+        console.log('mqtt message arrived-> topic: ' + topic + ', payload: '+ message.toString())
+    });
+    
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
 
